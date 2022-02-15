@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.paint.Color?>
+<?import javafx.scene.paint.LinearGradient?>
+<?import javafx.scene.paint.Stop?>
+<?import javafx.scene.text.Font?>
+
+<VBox alignment="TOP_RIGHT" prefHeight="400" prefWidth="600" spacing="5.0" style="-fx-background-color: #3699d7; -fx-border-color: black; -fx-border-width: 5px; -fx-border-radius: 5%;" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="ifpr.pgua.eic.projetovendas.telas.CadastroProduto">
+    <padding>
+        <Insets topRightBottomLeft="8.0" />
+    </padding>
+   <HBox alignment="TOP_CENTER" prefHeight="100.0" prefWidth="200.0">
+      <children>
+         <Label fx:id="LabelH1" text="Menu de Cadastro de Produtos" underline="true">
+            <font>
+               <Font name="Consolas" size="33.0" />
+            </font>
+            <textFill>
+               <LinearGradient endX="1.0" endY="1.0">
+                  <stops>
+                     <Stop>
+                        <color>
+                           <Color red="0.29064327478408813" green="0.24561403691768646" blue="0.6315789222717285" />
+                        </color>
+                     </Stop>
+                     <Stop offset="0.01532567049808429">
+                        <color>
+                           <Color red="0.2666666805744171" green="0.20392157137393951" blue="0.7372549176216125" />
+                        </color>
+                     </Stop>
+                     <Stop offset="1.0">
+                        <color>
+                           <Color red="0.6784313917160034" green="0.4117647111415863" blue="0.8392156958580017" />
+                        </color>
+                     </Stop>
+                  </stops>
+               </LinearGradient>
+            </textFill>
+         </Label>
+      </children>
+      <VBox.margin>
+         <Insets bottom="8.0" left="30.0" right="30.0" top="10.0" />
+      </VBox.margin>
+   </HBox>
+
+    <Label opacity="0.5" text="Nome:" />
+    <TextField fx:id="tfNome" alignment="CENTER" promptText="Nome do Produto" />
+
+    <Label opacity="0.5" text="Descrição" />
+    <TextField fx:id="tfDescricao" alignment="CENTER" promptText="Descrição " /> 
+    
+    <Label opacity="0.5" text="Quantidade em Estoque" />
+    <TextField fx:id="tfQuantidadeEstoque" alignment="CENTER" promptText="Itens no Estoque" />
+
+    <Label opacity="0.5" text="Valor R$" />
+    <TextField fx:id="tfValor" alignment="CENTER" promptText="Valor " />
+   <AnchorPane prefHeight="200.0" prefWidth="200.0">
+      <children>
+         <Button fx:id="btCadastrar" layoutX="125.0" layoutY="14.0" onAction="#cadastrar" prefHeight="25.0" prefWidth="75.0" text="Cadastar" />
+         <Button fx:id="btLimpar" layoutX="404.0" layoutY="14.0" onAction="#limpar" prefHeight="25.0" prefWidth="75.0" text="Limpar" />
+      </children>
+   </AnchorPane>
+
+</VBox>

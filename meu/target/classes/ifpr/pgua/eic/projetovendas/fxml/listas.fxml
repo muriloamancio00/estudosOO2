@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ListView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<VBox fx:id="rootPane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="700.0" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="ifpr.pgua.eic.projetovendas.telas.Listas">
+   <children>
+      <AnchorPane prefHeight="462.0" prefWidth="600.0">
+         <children>
+            <VBox alignment="TOP_CENTER" layoutX="20.0" layoutY="34.0" prefHeight="490.0" prefWidth="317.0">
+               <children>
+                  <Label text="Pessoas">
+                     <VBox.margin>
+                        <Insets bottom="12.0" top="5.0" />
+                     </VBox.margin>
+                     <font>
+                        <Font name="Consolas" size="20.0" />
+                     </font>
+                  </Label>
+                  <ListView fx:id="lstPessoas" prefHeight="350.0" prefWidth="200.0" />
+                  <HBox alignment="TOP_CENTER" prefHeight="100.0" prefWidth="200.0" spacing="100.0">
+                     <children>
+                        <Button fx:id="btAtualizarPessoa" mnemonicParsing="false" onAction="#atualizarPessoa" prefHeight="30.0" prefWidth="75.0" text="Alterar">
+                           <HBox.margin>
+                              <Insets />
+                           </HBox.margin>
+                        </Button>
+                        <Button fx:id="btRemoverPessoa" mnemonicParsing="false" onAction="#removerPessoa" prefHeight="30.0" prefWidth="75.0" text="Remover" />
+                     </children>
+                     <VBox.margin>
+                        <Insets top="8.0" />
+                     </VBox.margin>
+                  </HBox>
+               </children>
+            </VBox>
+            <VBox alignment="CENTER" layoutX="369.0" layoutY="34.0" prefHeight="490.0" prefWidth="317.0">
+               <children>
+                  <Label text="Produtos">
+                     <VBox.margin>
+                        <Insets bottom="12.0" top="5.0" />
+                     </VBox.margin>
+                     <font>
+                        <Font name="Consolas" size="20.0" />
+                     </font>
+                  </Label>
+                  <ListView fx:id="lstProdutos" prefHeight="350.0" prefWidth="200.0" />
+                  <HBox alignment="TOP_CENTER" prefHeight="100.0" prefWidth="200.0" spacing="100.0">
+                     <children>
+                        <Button fx:id="btAtualizarProduto" mnemonicParsing="false" onAction="#atualizarProduto" prefHeight="30.0" prefWidth="75.0" text="Alterar">
+                           <HBox.margin>
+                              <Insets />
+                           </HBox.margin>
+                        </Button>
+                        <Button fx:id="btRemoverProduto" mnemonicParsing="false" onAction="#removerProduto" prefHeight="30.0" prefWidth="75.0" text="Remover" />
+                     </children>
+                     <VBox.margin>
+                        <Insets top="8.0" />
+                     </VBox.margin>
+                  </HBox>
+               </children>
+            </VBox>
+            <TextField onKeyTyped="#filtraProdutos" fx:id="tfProdutos" layoutX="369.0" promptText="Busca Produtos" layoutY="14.0" prefHeight="23.0" prefWidth="317.0" />
+            <TextField onKeyTyped = "#filtraPessoas" promptText="Busca Pessoas" fx:id="tfPessoas" layoutX="20.0" layoutY="14.0" prefHeight="23.0" prefWidth="317.0" />
+         </children>
+      </AnchorPane>
+   </children>
+</VBox>
